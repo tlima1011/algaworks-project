@@ -115,7 +115,26 @@ public class Carro {
 	public void frear() {
 		
 	}
-
+	
+	public void dadosAutomoveis(Carro [] carros) { 
+		double soma = 0.0; 
+		for(int i = 0; i < carros.length;i++) {
+			System.out.println("==============================");
+			System.out.printf("Dados do %dº automóvel:\n", (i+1));
+			System.out.println("==============================");
+			System.out.println("Fabricante: " +carros[i].getFabricante());
+			System.out.println("Modelo: " +carros[i].getModelo());
+			System.out.println("Cor: " + carros[i].getCor());
+			System.out.println("Ano Fabricacao: " +carros[i].getAnoDeFabricacao());
+			System.out.println("Tipo de combustivel: " +carros[i].getTipoCombustivel());
+			System.out.println("Valor de mercado R$" +String.format("%.2f", carros[i].getValorDeMercado()));
+			soma += carros[i].getValorDeMercado();
+			System.out.println();
+		}
+		System.out.println("Valor total R$" +String.format("%.2f", soma));
+	}
+	
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder(); 
