@@ -92,6 +92,12 @@ public class Carro {
 	public void setDono(Proprietario dono) {
 		this.dono = dono;
 	}
+	
+	public void alterarModel(String modelo) {
+		if(modelo != null) {
+			this.modelo = modelo; 
+		}
+	}
 
 	public void ligar() { 
 		if(modelo == null) {
